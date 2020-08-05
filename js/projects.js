@@ -1,4 +1,4 @@
-const project = [
+const projects = [
   {
     title: "project 1",
     description:
@@ -6,7 +6,7 @@ const project = [
     tech: ["HTML", "CSS"],
     github: "https://github.com/rohald89/FEWD-TD-unit01",
     live: "https://rohald89.github.io/FEWD-TD-unit01/",
-    image: "images/projects/project1.jpg",
+    image: "./images/projects/Profile-Page.png",
   },
   {
     title: "project 2",
@@ -15,7 +15,7 @@ const project = [
     tech: ["HTML", "CSS"],
     github: "https://github.com/rohald89/FEWD-TD-unit02",
     live: "https://rohald89.github.io/FEWD-TD-unit02/",
-    image: "images/projects/project2.jpg",
+    image: "./images/projects/Responsive-Profile-Desktop.png",
   },
   {
     title: "project 3",
@@ -24,7 +24,7 @@ const project = [
     tech: ["HTML", "CSS"],
     github: "https://github.com/rohald89/FEWD-TD-unit03",
     live: "https://rohald89.github.io/FEWD-TD-unit03/",
-    image: "images/projects/project3.jpg",
+    image: "./images/projects/Online-Registration-Form-Desktop.png",
   },
   {
     title: "project 4",
@@ -33,7 +33,7 @@ const project = [
     tech: ["HTML", "CSS", "Sass"],
     github: "https://github.com/rohald89/FEWD-TD-unit04",
     live: "https://rohald89.github.io/FEWD-TD-unit04/",
-    image: "images/projects/project4.jpg",
+    image: "./images/projects/Style-Guide.png",
   },
   {
     title: "project 5",
@@ -42,7 +42,7 @@ const project = [
     tech: ["HTML", "CSS", "jQuery", "JavaScript"],
     github: "https://github.com/rohald89/FEWD-TD-unit05",
     live: "https://rohald89.github.io/FEWD-TD-unit05/",
-    image: "images/projects/project5.jpg",
+    image: "./images/projects/Photo-Gallery-Desktop.png",
   },
   {
     title: "project 6",
@@ -51,7 +51,7 @@ const project = [
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/rohald89/FEWD-TD-unit06",
     live: "https://rohald89.github.io/FEWD-TD-unit06/",
-    image: "images/projects/project6.jpg",
+    image: "./images/projects/Wheel-of-Success.png",
   },
   {
     title: "project 7",
@@ -60,7 +60,7 @@ const project = [
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/rohald89/FEWD-TD-unit07",
     live: "https://rohald89.github.io/FEWD-TD-unit017",
-    image: "images/projects/project7.jpg",
+    image: "./images/projects/WebApp-Dashboard-Desktop.png",
   },
   {
     title: "project 8",
@@ -69,6 +69,6 @@ const project = [
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/rohald89/FEWD-TD-unit08",
     live: "https://rohald89.github.io/FEWD-TD-unit08/",
-    image: "images/projects/project8.jpg",
+    image: "./images/projects/Employee-Directory-Desktop.png",
   },
 ];

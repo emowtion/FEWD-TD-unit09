@@ -2,8 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=§, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/e1b6966a6a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Rohald's Portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div id="open-nav" class="nav-container">
+        <div id="navigation">
+        </div>
+    </div>
+    <nav id="nav" class="">
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <main id="main">
+        <section id="home">
+          <h1>Welcome to my Portfolio</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur, minima! Quod accusantium ipsam, molestiae delectus
+            pariatur quia libero error voluptatem.
+          </p>
+        </section>
+        <section id="about">
+          <h1>Welcome to my Portfolio</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur, minima! Quod accusantium ipsam, molestiae delectus
+            pariatur quia libero error voluptatem.
+          </p>
+        </section>
+        <!-- <section id="projects">
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="./images/Wheel-of-Success.png" alt="Wheel of Success"></li>
+                <li class="splide__slide"><img src="./images/WebApp-Dashboard-Desktop.png" alt="Web App Dashboard"></li>
+                <li class="splide__slide"><img src="./images/Style-Guide.png" alt="Style Guide"></li>
+                <li class="splide__slide"><img src="./images/Responsive-Profile-Desktop.png" alt=""></li>
+                <li class="splide__slide"><img src="./images/Profile-Page.png" alt=""></li>
+                <li class="splide__slide"><img src="./images/Photo-Gallery-Desktop.png" alt=""></li>
+                <li class="splide__slide"><img src="./images/Online-Registration-Form-Desktop.png" alt=""></li>
+                <li class="splide__slide"><img src="./images/Employee-Directory-Desktop.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </section> -->
+        <section id="contact">
+          <h1 id='project-title'>SwiperJS test</h1>
+          <div class="swiper-container" id="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- Slides -->
+                <img src="./images/projects/Employee-Directory-Desktop.png" class="swiper-slide" alt="">
+                <img src="./images/projects/Online-Registration-Form-Desktop.png" class="swiper-slide" alt="">
+                <img src="./images/projects/Photo-Gallery-Desktop.png" class="swiper-slide" alt="">
+                <img src="./images/projects/Profile-Page.png" class="swiper-slide" alt="">
+                <img src="./images/projects/Responsive-Profile-Desktop.png" class="swiper-slide" alt="">
+                <img src="./images/projects/Style-Guide.png" class="swiper-slide" alt="">
+                <img src="./images/projects/WebApp-Dashboard-Desktop.png" class="swiper-slide" alt="">
+                <img src="./images/projects/Wheel-of-Success.png" class="swiper-slide" alt="">
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev" id="prevBtn"></div>
+            <div class="swiper-button-next" id="nextBtn"></div>
+
+        </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
 </html>
