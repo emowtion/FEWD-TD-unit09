@@ -39,11 +39,11 @@ swiperContainer.addEventListener("click", (e) => {
 // NAVIGATION HAMBURGER OPEN / CLOSE
 const hamburger = document.getElementById("open-nav");
 const navigation = document.getElementById("navigation");
-const nav = document.getElementById("nav");
+const menu = document.getElementById("menu");
 
 function openNav() {
   navigation.classList.toggle("nav-open");
-  nav.classList.toggle("nav-active");
+  menu.classList.toggle("nav-active");
 }
 
 hamburger.addEventListener("click", openNav);

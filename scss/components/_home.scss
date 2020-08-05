@@ -1,2 +1,23 @@
 #home {
+  margin: 0;
+  @include mq($bp-m) {
+    flex-direction: row;
+  }
+}
+
+.hero-image {
+  z-index: 1;
+  height: 70vh;
+  width: 100%;
+  min-width: 320px;
+  max-width: 400px;
+  background: url("../../images/profile-image.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 0);
+  border: 1px solid red;
+  @include mq($bp-m) {
+  }
+  @include mq($bp-l) {
+  }
 }
