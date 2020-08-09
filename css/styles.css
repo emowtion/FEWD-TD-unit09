@@ -337,11 +337,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
   text-align: center;
   width: calc(100vw - 120px);
-  height: calc(100vh - 40px);
-  scroll-snap-align: center;
+  min-height: 100vh;
+  scroll-snap-align: start;
   margin: 20px 60px; }
 
 #menu {
@@ -366,11 +365,14 @@ section {
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 50%;
+  top: 0;
   right: 10px;
   z-index: 20;
   height: 40px;
   width: 40px; }
+  @media (min-width: 768px) {
+    .nav-container {
+      top: 50%; } }
 
 #menu.nav-active {
   display: flex;
@@ -457,11 +459,62 @@ nav ul li {
   #navigation.nav-open:after {
     transform: rotate(-405deg); }
 
-.swiper-container {
-  width: 50%; }
+.active-lang {
+  color: black; }
+
+#projects {
+  min-height: calc(100vh - 40px);
+  justify-content: center; }
+
+.project {
+  display: grid;
+  position: relative;
+  background-color: pink;
+  width: 80vw;
+  max-width: 1100px;
+  margin: 50px;
+  grid-template-columns: 90vw;
+  grid-template-areas: "project__title" "project__image" "project__description" "project__technologies" "project__links"; }
+  @media (min-width: 768px) {
+    .project {
+      grid-template-columns: 50% 1fr 325px;
+      grid-template-rows: 0.2fr minmax(250px, 1fr) 50px;
+      grid-template-areas: "project__title . project__image" "project__description . project__image" "project__technologies project__links project__links"; }
+      .project:nth-child(odd) {
+        grid-template-columns: 325px 1fr 50%;
+        grid-template-rows: 50px minmax(300px, 1fr) 0.2fr;
+        grid-template-areas: "project__image . project__title" "project__image . project__description" "project__links project__links project__technologies"; }
+        .project:nth-child(odd) .project__image {
+          right: 30px; } }
+
+.project__title {
+  grid-area: project__title; }
+
+.project__image {
+  grid-area: project__image;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .project__image {
+      box-shadow: -5px 5px 10px black;
+      position: absolute;
+      top: -30px;
+      right: -30px; } }
+
+.project__description {
+  grid-area: project__description; }
+
+.project__features {
+  grid-area: project__features; }
+
+.project__links {
+  grid-area: project__links; }
+
+.project__technologies {
+  grid-area: project__technologies; }
 
 #home {
-  margin: 0; }
+  margin: 0;
+  height: calc(100vh - 40px); }
   @media (min-width: 768px) {
     #home {
       flex-direction: row; } }
@@ -475,7 +528,6 @@ nav ul li {
   background: url("../../images/profile-image.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 0);
-  border: 1px solid red; }
+  clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 0); }
 
 /*# sourceMappingURL=styles.css.map */

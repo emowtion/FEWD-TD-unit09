@@ -1,49 +1,73 @@
-// SWIPER JS
-var mySwiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  // loop: true,
-  allowTouchMove: false,
-  slidesPerView: 3,
-  centeredSlides: true,
-  effect: "fade",
-  speed: 500,
-  distance: 10,
-  // mousewheel: true,
-  // width: 300,
-
-  // If we need pagination
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-let swiperContainer = document.getElementById("swiper-container");
-let swiperWrapper = document.getElementById("swiper-wrapper");
-let projectTitle = document.getElementById("project-title");
-
-swiperContainer.addEventListener("click", (e) => {
-  if (
-    e.target.classList[0] === "swiper-button-next" ||
-    e.target.classList[0] === "swiper-button-prev"
-  ) {
-    projectTitle.textContent = projects[mySwiper.realIndex].title;
-  }
-});
-
-// NAVIGATION HAMBURGER OPEN / CLOSE
 const hamburger = document.getElementById("open-nav");
 const navigation = document.getElementById("navigation");
 const menu = document.getElementById("menu");
 
+const languages = document.getElementById("languages");
+const languageLink = languages.querySelectorAll("a");
+
+const homeTitle = document.querySelector(".home__title");
+const homeParagraph = document.querySelector(".home__paragraph");
+
+let setLanguage = "english";
+
+// NAVIGATION HAMBURGER OPEN / CLOSE
 function openNav() {
   navigation.classList.toggle("nav-open");
   menu.classList.toggle("nav-active");
 }
 
 hamburger.addEventListener("click", openNav);
+menu.addEventListener("click", () => {
+  navigation.classList.toggle("nav-open");
+  menu.classList.toggle("nav-active");
+});
+
+//GENERATE THE PROJECT DIVS
+function generateProjects() {
+  const projectsDiv = document.getElementById("projects");
+  let projectsHTML = "";
+  projectsDiv.innerHTML = "";
+  projects[setLanguage].forEach((project, index) => {
+    let title = project.title;
+    let description = project.description;
+    let image = project.image;
+    let github = project.github;
+    let liveLink = project.live;
+
+    projectsHTML += `
+  <div class="project" data-index="${index}">
+            <h2 class="project__title">${title}</h2>
+            <img class="project__image" src="${image}" alt="">
+
+            <p class="project__description">${description}</p>
+            <ul class="project__technologies">`;
+
+    project.tech.forEach((technologie) => {
+      projectsHTML += `<li class="project__technology">${technologie}</li>`;
+    });
+    projectsHTML += `
+            </ul>
+            <div class="project__links">
+              <a href="${liveLink}" class="project__link project__live">Live Version</a>
+              <a href="${github}" class="project__link project__github">Github</a>
+            </div>
+          </div>`;
+  });
+  projectsDiv.innerHTML = projectsHTML;
+}
+
+generateProjects();
+
+// CHANGE LANGUAGE
+
+languageLink.forEach((lang) => {
+  lang.addEventListener("click", () => {
+    languages.querySelector(".active-lang").classList.remove("active-lang");
+    lang.classList.add("active-lang");
+    const attr = lang.getAttribute("language");
+    homeTitle.textContent = content[attr].title;
+    homeParagraph.textContent = content[attr].paragraph;
+    setLanguage = attr;
+    generateProjects();
+  });
+});

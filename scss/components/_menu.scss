@@ -12,6 +12,7 @@
 #menu * {
   display: none;
 }
+
 #menu.nav-active * {
   display: flex;
 }
@@ -20,11 +21,14 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 50%;
+  top: 0;
   right: 10px;
   z-index: 20;
   height: 40px;
   width: 40px;
+  @include mq($bp-m) {
+    top: 50%;
+  }
 }
 
 #menu.nav-active {
@@ -137,4 +141,8 @@ nav ul li {
   &:after {
     transform: rotate(-405deg);
   }
+}
+
+.active-lang {
+  color: black;
 }

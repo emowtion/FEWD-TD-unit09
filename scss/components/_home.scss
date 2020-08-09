@@ -1,5 +1,6 @@
 #home {
   margin: 0;
+  height: calc(100vh - 40px);
   @include mq($bp-m) {
     flex-direction: row;
   }
@@ -15,7 +16,6 @@
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 0);
-  border: 1px solid red;
   @include mq($bp-m) {
   }
   @include mq($bp-l) {
