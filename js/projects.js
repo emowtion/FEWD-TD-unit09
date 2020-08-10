@@ -1,49 +1,72 @@
 const projects = {
   english: [
     {
-      title: "project 1",
-      opdrachtgever: "",
-      grade: "",
+      title: "Personal Profile",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the first project of the Front End Web Development Techdegree.",
-      challenges: "",
-      features: "",
+        "This was the very first project of the Front End Web Development Techdegree. With this project I had some practice with HTML and CSS basics",
+      challenges:
+        "At this time it was challenging to find what properties to use to get to a certain style. With the help of MDN docs I achieved the results I was looking for.",
+      learned: "",
       tech: ["HTML", "CSS"],
       github: "https://github.com/rohald89/FEWD-TD-unit01",
       live: "https://rohald89.github.io/FEWD-TD-unit01/",
       image: "./images/projects/Profile-Page.png",
     },
     {
-      title: "project 2",
+      title: "Responsive Layout",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the second project of the Front End Web Development Techdegree.",
+        "A page that is completely responsive thanks to the use of floats and media queries",
+      challenges:
+        "Floats were definitely a challenge at this point, getting them to behave how I wanted.",
+      learned: "How to use a Mobile First approach",
       tech: ["HTML", "CSS"],
       github: "https://github.com/rohald89/FEWD-TD-unit02",
       live: "https://rohald89.github.io/FEWD-TD-unit02/",
       image: "./images/projects/Responsive-Profile-Desktop.png",
     },
     {
-      title: "project 3",
+      title: "Online Registration Form",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the third project of the Front End Web Development Techdegree.",
+        "By using a Mobile First approach I've created a basic registration form",
+      challenges:
+        "The biggest challenge on this project was the use of Flexbox. It didn't take to long to see the powers of Flexbox but it took some practice to really get to know all the available properties and their values.",
+      learned: "Flexbox and the different input elements with their attributes",
       tech: ["HTML", "CSS"],
       github: "https://github.com/rohald89/FEWD-TD-unit03",
       live: "https://rohald89.github.io/FEWD-TD-unit03/",
       image: "./images/projects/Online-Registration-Form-Desktop.png",
     },
     {
-      title: "project 4",
+      title: "Style Guide",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the fourth project of the Front End Web Development Techdegree.",
+        "With the HTML and CSS provided I rewritten the stylesheet using Sass. With this preprocessor I tried to make the stylesheet as readable and DRY as possible.",
+      challenges:
+        "Sass functions and loops were challenging at the time but after reading the Sass documentation got me through it.",
+      learned:
+        "The power of Sass and the basics of using loops and functions. Getting a hang of those loops gave me a headstart on JavaScript loops",
       tech: ["HTML", "CSS", "Sass"],
       github: "https://github.com/rohald89/FEWD-TD-unit04",
       live: "https://rohald89.github.io/FEWD-TD-unit04/",
       image: "./images/projects/Style-Guide.png",
     },
     {
-      title: "project 5",
+      title: "Interactive Photo Gallery",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the fifth project of the Front End Web Development Techdegree.",
+        "With the HTML and CSS provided I rewritten the stylesheet using Sass. With this preprocessor I tried to make the stylesheet as readable and DRY as possible.",
+      challenges:
+        "Sass functions and loops were challenging at the time but after reading the Sass documentation got me through it.",
+      learned:
+        "The power of Sass and the basics of using loops and functions. Getting a hang of those loops gave me a headstart on JavaScript loops",
       tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit05",
       live: "https://rohald89.github.io/FEWD-TD-unit05/",
