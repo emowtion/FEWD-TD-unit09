@@ -374,7 +374,7 @@ section {
 
 #menu.nav-active {
   display: flex;
-  background-color: #e0e5eb;
+  background: #f3f3f3;
   z-index: 5;
   margin: auto;
   top: 0;
@@ -460,6 +460,24 @@ nav ul li {
 .active-lang {
   color: black; }
 
+.social-icon {
+  margin: 20px 10px;
+  cursor: pointer; }
+  .social-icon.linkedin:hover svg {
+    fill: #0679b4; }
+  .social-icon.twitter:hover svg {
+    fill: #53adeb; }
+  .social-icon.facebook:hover svg {
+    fill: #3a5997; }
+  .social-icon.instagram:hover svg {
+    fill: url(#rg); }
+  .social-icon.github:hover svg {
+    fill: #000; }
+  .social-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: gray; }
+
 #projects {
   min-height: calc(100vh - 40px);
   justify-content: center; }
@@ -534,7 +552,7 @@ nav ul li {
   display: flex;
   height: 70vh;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.4));
   padding-right: 60px; }
 
 .logo {
@@ -547,7 +565,6 @@ nav ul li {
     letter-spacing: 4.5px; }
 
 .hero-image {
-  z-index: -1;
   height: 70vh;
   width: 100%;
   min-width: 320px;

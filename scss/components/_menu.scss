@@ -33,7 +33,7 @@
 
 #menu.nav-active {
   display: flex;
-  background-color: #e0e5eb;
+  background: rgb(243, 243, 243);
   z-index: 5;
   margin: auto;
   top: 0;
@@ -145,4 +145,32 @@ nav ul li {
 
 .active-lang {
   color: black;
+}
+
+.socials {
+}
+
+.social-icon {
+  margin: 20px 10px;
+  cursor: pointer;
+  &.linkedin:hover svg {
+    fill: #0679b4;
+  }
+  &.twitter:hover svg {
+    fill: #53adeb;
+  }
+  &.facebook:hover svg {
+    fill: #3a5997;
+  }
+  &.instagram:hover svg {
+    fill: url(#rg);
+  }
+  &.github:hover svg {
+    fill: #000;
+  }
+  & svg {
+    width: 40px;
+    height: 40px;
+    fill: rgb(128, 128, 128);
+  }
 }

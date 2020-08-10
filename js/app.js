@@ -17,15 +17,12 @@ function openNav() {
 }
 
 hamburger.addEventListener("click", openNav);
-menu.addEventListener("click", () => {
-  navigation.classList.toggle("nav-open");
-  menu.classList.toggle("nav-active");
-});
+menu.addEventListener("click", openNav);
 
 //GENERATE THE PROJECT DIVS
 function generateProjects() {
   const projectsDiv = document.getElementById("projects");
-  let projectsHTML = "";
+  let projectsHTML = "<h1>Projects</h1>";
   projectsDiv.innerHTML = "";
   projects[setLanguage].forEach((project, index) => {
     let title = project.title;
