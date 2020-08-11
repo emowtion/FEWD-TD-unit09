@@ -457,8 +457,28 @@ nav ul li {
   #navigation.nav-open:after {
     transform: rotate(-405deg); }
 
+.language {
+  margin: 20px;
+  cursor: pointer;
+  position: relative; }
+  .language:after {
+    content: "";
+    transition: 0.4s width;
+    opacity: 0;
+    width: 1px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    height: 3px;
+    background: black; }
+  .language:hover:after {
+    width: 100%;
+    opacity: 1;
+    transform: translateX(-50%); }
+
 .active-lang {
-  color: black; }
+  color: black;
+  font-weight: bold; }
 
 .social-icon {
   margin: 20px 10px;

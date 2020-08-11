@@ -14,6 +14,19 @@ let setLanguage = "english";
 function openNav() {
   navigation.classList.toggle("nav-open");
   menu.classList.toggle("nav-active");
+  gsap.from(".nav-active li", {
+    duration: 0.6,
+    x: 100,
+    opacity: 0,
+    stagger: 0.25,
+    ease: "power4.out",
+  });
+  gsap.from(languages, { duration: 0.5, y: -50, delay: 0.6 });
+  gsap.from(".social-icon", {
+    duration: 0.4,
+    y: 100,
+    delay: 0.6,
+  });
 }
 
 hamburger.addEventListener("click", openNav);
