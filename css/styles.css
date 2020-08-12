@@ -562,15 +562,16 @@ nav ul li {
   flex-direction: column;
   height: 100vh;
   align-items: center;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.4));
-  padding-right: 60px; }
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.4)); }
   @media (min-width: 768px) {
     .hero__section {
+      flex-direction: row;
       height: 70vh;
-      flex-direction: row; } }
+      padding-right: 60px; } }
 
 .logo {
-  margin: 0 auto; }
+  margin: 0 auto;
+  align-content: center; }
   .logo h1 {
     letter-spacing: 1.5px;
     margin: 0.5rem 0; }

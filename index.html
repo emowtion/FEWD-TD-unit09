@@ -122,12 +122,26 @@
 
         <section id="contact">
                     
-          <h1>Welcome to my Portfolio</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, minima! Quod accusantium ipsam, molestiae delectus
-            pariatur quia libero error voluptatem.
-          </p>
+          <h1>Contact</h1>
+          <div class="contact-container">
+            <form action="https://formspree.io/FORM_ID" method="POST">
+              <div class="input-wrapper">
+                <label>Your Name:</label>
+                <input type="text" name="name" required>
+              </div>
+              <div class="input-wrapper">
+              <label>Your Email:</label>
+              <input type="email" name="_replyto" required>
+            </div>
+            <div class="input-wrapper">
+              <label>Message:</label>
+              <textarea name="message" required></textarea>
+            </div>
+              <button>Submit</button>
+            </form>
+          </div>
+          
+          
         </section>
 
       </div>
