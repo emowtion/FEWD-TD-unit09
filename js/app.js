@@ -81,3 +81,47 @@ languageLink.forEach((lang) => {
     generateProjects();
   });
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+// ScrollTrigger.batch("[data-index]", {
+//   // interval: 0.1, // time window (in seconds) for batching to occur.
+//   // batchMax: 3,   // maximum batch size (targets)
+//   onEnter: (batch) => gsap.from(batch, { autoAlpha: 1, x: 500, duration: 2 }),
+//   // also onLeave, onEnterBack, and onLeaveBack
+//   // also most normal ScrollTrigger values like start, end, etc.
+// });
+
+gsap.set(".project", { x: 500, opacity: 0 });
+ScrollTrigger.batch(".project", {
+  //interval: 0.1, // time window (in seconds) for batching to occur.
+  //batchMax: 3,   // maximum batch size (targets)
+  onEnter: (batch) =>
+    gsap.to(batch, {
+      opacity: 1,
+      x: 0,
+      stagger: 0.4,
+    }),
+  onLeave: (batch) =>
+    gsap.to(batch, {
+      opacity: 0,
+      x: -500,
+    }),
+  onEnterBack: (batch) =>
+    gsap.to(batch, {
+      opacity: 1,
+      x: 0,
+      stagger: 0.4,
+    }),
+  onLeaveBack: (batch) =>
+    gsap.to(batch, {
+      opacity: 0,
+      x: 500,
+    }),
+  start: "20px bottom",
+  end: "center top",
+});
+
+ScrollTrigger.addEventListener("refreshInit", () =>
+  gsap.set(".project", { y: 0 })
+);

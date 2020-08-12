@@ -1,11 +1,11 @@
-.container {
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
+// .container {
+//   // z-index: -1;
+//   // width: 100%;
+//   // height: 100%;
+//   // overflow-y: scroll;
+//   // scroll-behavior: smooth;
+//   // scroll-snap-type: y mandatory;
+// }
 
 section {
   display: flex;
@@ -14,8 +14,8 @@ section {
   text-align: center;
   // width: calc(100vw - 120px);
   min-height: 100vh;
-  scroll-snap-align: start;
-  margin: 20px 60px;
+  // scroll-snap-align: start;
+  // margin: 20px 60px;
   // background-color: blue;
   // width: calc(100vw - 120px);
 }
