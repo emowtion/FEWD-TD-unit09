@@ -48,7 +48,6 @@ function generateProjects() {
   <div class="project" data-index="${index}">
             <h2 class="project__title">${title}</h2>
             <img class="project__image" src="${image}" alt="">
-
             <p class="project__description">${description}</p>
             <ul class="project__technologies">`;
 
@@ -58,8 +57,8 @@ function generateProjects() {
     projectsHTML += `
             </ul>
             <div class="project__links">
-              <a href="${liveLink}" class="project__link project__live">Live Version</a>
-              <a href="${github}" class="project__link project__github">Github</a>
+              <a href="${liveLink}" class="project__link project__live" target="blank">Live Version</a>
+              <a href="${github}" class="project__link project__github" target="blank">Github</a>
             </div>
           </div>`;
   });

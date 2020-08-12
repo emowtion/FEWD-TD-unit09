@@ -1,0 +1,75 @@
+#contact {
+}
+
+.contact-container {
+  width: 90%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.699);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .input-wrapper {
+    position: relative;
+    margin: 50px;
+    color: #f7f7f7;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.4s width;
+    }
+    &:after {
+      width: 100%;
+      height: 3px;
+      background: #f7f7f7;
+      & input:focus,
+      & input:valid,
+      & textarea:focus,
+      & textarea:valid {
+        width: 0;
+      }
+    }
+    &:before {
+      width: 0;
+      height: 3px;
+      background-color: rgb(30, 205, 218);
+      transition: 1s all;
+      input:focus,
+      input:valid,
+      textarea:focus,
+      textarea:valid {
+        width: 100%;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    pointer-events: none;
+    transition: 0.3s all;
+  }
+  input,
+  textarea {
+    outline: none;
+    border: none;
+    color: #f7f7f7;
+    //   border-bottom: 2px solid white;
+    padding: 10px;
+    background: transparent;
+
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -20px;
+      left: 5px;
+      color: rgb(30, 205, 218);
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+  }
+}
