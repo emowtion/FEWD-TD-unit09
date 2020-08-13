@@ -19,3 +19,25 @@ section {
   // background-color: blue;
   // width: calc(100vw - 120px);
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  transition: 0.3s all;
+  transform: rotate(-90deg);
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  i {
+    // margin: 5px;
+  }
+  &:hover {
+    i {
+    }
+  }
+}

@@ -336,6 +336,18 @@ section {
   min-height: 100vh;
   scroll-snap-align: start; }
 
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  transition: 0.3s all;
+  transform: rotate(-90deg); }
+  .back-to-top p {
+    margin: 0;
+    padding: 0; }
+
 #menu {
   display: flex;
   flex-direction: column;
