@@ -123,8 +123,8 @@
         <section id="contact">
                     
           <h1>Contact</h1>
-          <div class="contact-container">
-            <form method="POST">
+          <!-- <div class="contact-container">
+            <form id="form" method="POST">
               <div class="input-wrapper">
                 
                 <input type="text" name="name" required>
@@ -132,7 +132,7 @@
               </div>
               <div class="input-wrapper">
              
-              <input type="email" name="_replyto" required>
+              <input type="email" name="email" required onblur="validate()">
               <label>Email</label>
             </div>
             <div class="input-wrapper">
@@ -142,8 +142,24 @@
             </div>
               <button>Submit</button>
             </form>
+          </div> -->
+          <div class="contact-container">
+            <form id="form" method="POST">
+              <div class="input-wrapper">
+                <input type="text" name="name" onfocus="inFocus(this)" onblur="validate(this)" required>
+                <label>Full Name</label>
+              </div>
+              <div class="input-wrapper">
+                <input type="email" name="email" onfocus="inFocus(this)" onblur="validate(this)" required>
+                <label>Email</label>
+              </div>
+              <div class="input-wrapper">
+                <textarea name="message" onfocus="inFocus(this)" onblur="validate(this)" required></textarea>
+                <label>Message</label>
+              </div>
+              <button>Submit</button>
+            </form>
           </div>
-          
           
         </section>
 

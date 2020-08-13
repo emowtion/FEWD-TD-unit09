@@ -1,5 +1,5 @@
-#contact {
-}
+// #contact {
+// }
 
 .contact-container {
   width: 90%;
@@ -34,40 +34,49 @@
       left: 0;
       background-color: rgb(30, 205, 218);
     }
-    &:focus-within::before,
-    &:valid::before {
+
+    &:focus-within::before {
       width: 100%;
     }
 
-    &:focus-within::after,
-    &:valid::after {
+    &:focus-within::after {
       width: 0;
     }
-  }
 
-  label {
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    pointer-events: none;
-    transition: 0.3s all;
-  }
-  input,
-  textarea {
-    outline: none;
-    border: none;
-    color: #f7f7f7;
-    //   border-bottom: 2px solid white;
-    padding: 10px;
-    background: transparent;
+    &.inFocus {
+      & input ~ label,
+      & textarea ~ label {
+        top: -20px;
+        left: 5px;
+        color: rgb(30, 205, 218);
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
 
-    &:focus ~ label,
-    &:valid ~ label {
-      top: -20px;
+    label {
+      position: absolute;
+      top: 10px;
       left: 5px;
-      color: rgb(30, 205, 218);
-      font-weight: bold;
-      font-size: 0.8rem;
+      pointer-events: none;
+      transition: 0.3s all;
+    }
+    input,
+    textarea {
+      outline: none;
+      border: none;
+      color: #f7f7f7;
+      //   border-bottom: 2px solid white;
+      padding: 10px;
+      background: transparent;
+
+      // &:focus ~ label {
+      //   top: -20px;
+      //   left: 5px;
+      //   color: rgb(30, 205, 218);
+      //   font-weight: bold;
+      //   font-size: 0.8rem;
+      // }
     }
   }
 }

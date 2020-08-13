@@ -124,3 +124,16 @@ ScrollTrigger.batch(".project", {
 ScrollTrigger.addEventListener("refreshInit", () =>
   gsap.set(".project", { y: 0 })
 );
+
+// fix email field so the label will stay in place even when the input is invalid (missing @)
+
+function inFocus(x) {
+  console.log(x.parentNode);
+  x.parentNode.classList.add("inFocus");
+}
+
+function validate(x) {
+  if (x.value === "") {
+    x.parentNode.classList.remove("inFocus");
+  }
+}

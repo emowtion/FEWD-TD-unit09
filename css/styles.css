@@ -317,8 +317,7 @@ template {
 body {
   font-family: "Montserrat", sans-serif;
   color: gray;
-  line-height: 1.6;
-  padding-right: 60px; }
+  line-height: 1.6; }
 
 /* ============================================= */
 /* Components Imports */
@@ -677,30 +676,28 @@ nav ul li {
       height: 3px;
       left: 0;
       background-color: #1ecdda; }
-    .contact-container .input-wrapper:focus-within::before, .contact-container .input-wrapper:valid::before {
+    .contact-container .input-wrapper:focus-within::before {
       width: 100%; }
-    .contact-container .input-wrapper:focus-within::after, .contact-container .input-wrapper:valid::after {
+    .contact-container .input-wrapper:focus-within::after {
       width: 0; }
-  .contact-container label {
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    pointer-events: none;
-    transition: 0.3s all; }
-  .contact-container input,
-  .contact-container textarea {
-    outline: none;
-    border: none;
-    color: #f7f7f7;
-    padding: 10px;
-    background: transparent; }
-    .contact-container input:focus ~ label, .contact-container input:valid ~ label,
-    .contact-container textarea:focus ~ label,
-    .contact-container textarea:valid ~ label {
+    .contact-container .input-wrapper.inFocus input ~ label, .contact-container .input-wrapper.inFocus textarea ~ label {
       top: -20px;
       left: 5px;
       color: #1ecdda;
       font-weight: bold;
       font-size: 0.8rem; }
+    .contact-container .input-wrapper label {
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      pointer-events: none;
+      transition: 0.3s all; }
+    .contact-container .input-wrapper input,
+    .contact-container .input-wrapper textarea {
+      outline: none;
+      border: none;
+      color: #f7f7f7;
+      padding: 10px;
+      background: transparent; }
 
 /*# sourceMappingURL=styles.css.map */
