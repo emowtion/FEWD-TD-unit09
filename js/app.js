@@ -29,13 +29,6 @@ function openNav() {
   });
 }
 
-hamburger.addEventListener("click", openNav);
-menu.addEventListener("click", (e) => {
-  if (e.target.tagName === "A") {
-    openNav();
-  }
-});
-
 //GENERATE THE PROJECT DIVS
 function generateProjects() {
   const projectsDiv = document.getElementById("projects");
@@ -99,20 +92,6 @@ function prefferedLanguage() {
   }
 }
 
-languageLink.forEach((link) => {
-  link.addEventListener("click", () => {
-    languages.querySelector(".active-lang").classList.remove("active-lang");
-    link.classList.add("active-lang");
-    const lang = link.getAttribute("language");
-    setLanguage = lang;
-    localStorage.setItem("language", setLanguage);
-    generateContent(lang);
-    generateProjects();
-    loadAnimations();
-  });
-});
-
-// gsap.registerPlugin(ScrollTrigger);
 function loadAnimations() {
   gsap.set(".project", { x: 500, opacity: 0 });
   ScrollTrigger.batch(".project", {
@@ -159,7 +138,25 @@ function validate(x) {
   }
 }
 
-// Save last used language to local storage
+languageLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    languages.querySelector(".active-lang").classList.remove("active-lang");
+    link.classList.add("active-lang");
+    const lang = link.getAttribute("language");
+    setLanguage = lang;
+    localStorage.setItem("language", setLanguage);
+    generateContent(lang);
+    generateProjects();
+    loadAnimations();
+  });
+});
+hamburger.addEventListener("click", openNav);
+menu.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    openNav();
+  }
+});
+
 prefferedLanguage();
 generateProjects();
 loadAnimations();
