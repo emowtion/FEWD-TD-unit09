@@ -700,5 +700,36 @@ nav ul li {
       color: #f7f7f7;
       padding: 10px;
       background: transparent; }
+  .contact-container .submitbtn {
+    background: transparent;
+    border: 2px solid #f7f7f7;
+    padding: 5px;
+    width: 115px;
+    position: relative;
+    align-self: center;
+    transition: 0.2s all;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none; }
+    .contact-container .submitbtn:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      background-color: #f7f7f7;
+      bottom: 0;
+      left: 0;
+      transition: 0.2s all; }
+    .contact-container .submitbtn:hover {
+      transform: translateY(-3px);
+      border-radius: 0; }
+      .contact-container .submitbtn:hover:after {
+        height: 3px; }
+    .contact-container .submitbtn:focus {
+      transform: translateY(0);
+      outline: none; }
+      .contact-container .submitbtn:focus:after {
+        height: 0; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,7 +8,7 @@ const languageLink = languages.querySelectorAll("a");
 const homeTitle = document.querySelector(".home__title");
 const homeParagraph = document.querySelector(".home__paragraph");
 
-let setLanguage = "english";
+let setLanguage = localStorage.getItem("language");
 
 // NAVIGATION HAMBURGER OPEN / CLOSE
 function openNav() {
@@ -69,65 +69,83 @@ function generateProjects() {
   projectsDiv.innerHTML = projectsHTML;
 }
 
-generateProjects();
-
 // CHANGE LANGUAGE
+function generateContent(lang) {
+  homeTitle.textContent = content[lang].title;
+  // homeParagraph.textContent = content[lang].paragraph;
+}
 
-languageLink.forEach((lang) => {
-  lang.addEventListener("click", () => {
+function prefferedLanguage() {
+  // check if there's something in localstorage already
+  // if not set to English
+  // add the styling to the currently selected class
+  setLanguage = localStorage.getItem("language");
+  if (setLanguage === "dutch") {
+    setLanguage = "dutch";
+    languageLink.forEach((lang) => {
+      if (lang.getAttribute("language") === "dutch") {
+        lang.classList.add("active-lang");
+        generateContent("dutch");
+      }
+    });
+  } else {
+    setLanguage = "english";
+    languageLink.forEach((lang) => {
+      if (lang.getAttribute("language") === "english") {
+        lang.classList.add("active-lang");
+        generateContent("english");
+      }
+    });
+  }
+}
+
+languageLink.forEach((link) => {
+  link.addEventListener("click", () => {
     languages.querySelector(".active-lang").classList.remove("active-lang");
-    lang.classList.add("active-lang");
-    const attr = lang.getAttribute("language");
-    homeTitle.textContent = content[attr].title;
-    homeParagraph.textContent = content[attr].paragraph;
-    setLanguage = attr;
+    link.classList.add("active-lang");
+    const lang = link.getAttribute("language");
+    setLanguage = lang;
+    localStorage.setItem("language", setLanguage);
+    generateContent(lang);
     generateProjects();
+    loadAnimations();
   });
 });
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
+function loadAnimations() {
+  gsap.set(".project", { x: 500, opacity: 0 });
+  ScrollTrigger.batch(".project", {
+    onEnter: (batch) =>
+      gsap.to(batch, {
+        opacity: 1,
+        x: 0,
+        stagger: 0.4,
+      }),
+    onLeave: (batch) =>
+      gsap.to(batch, {
+        opacity: 0,
+        x: -500,
+      }),
+    onEnterBack: (batch) =>
+      gsap.to(batch, {
+        opacity: 1,
+        x: 0,
+        stagger: 0.4,
+      }),
+    onLeaveBack: (batch) =>
+      gsap.to(batch, {
+        opacity: 0,
+        x: 500,
+      }),
+    start: "20px bottom",
+    end: "center top",
+  });
 
-// ScrollTrigger.batch("[data-index]", {
-//   // interval: 0.1, // time window (in seconds) for batching to occur.
-//   // batchMax: 3,   // maximum batch size (targets)
-//   onEnter: (batch) => gsap.from(batch, { autoAlpha: 1, x: 500, duration: 2 }),
-//   // also onLeave, onEnterBack, and onLeaveBack
-//   // also most normal ScrollTrigger values like start, end, etc.
-// });
-
-gsap.set(".project", { x: 500, opacity: 0 });
-ScrollTrigger.batch(".project", {
-  //interval: 0.1, // time window (in seconds) for batching to occur.
-  //batchMax: 3,   // maximum batch size (targets)
-  onEnter: (batch) =>
-    gsap.to(batch, {
-      opacity: 1,
-      x: 0,
-      stagger: 0.4,
-    }),
-  onLeave: (batch) =>
-    gsap.to(batch, {
-      opacity: 0,
-      x: -500,
-    }),
-  onEnterBack: (batch) =>
-    gsap.to(batch, {
-      opacity: 1,
-      x: 0,
-      stagger: 0.4,
-    }),
-  onLeaveBack: (batch) =>
-    gsap.to(batch, {
-      opacity: 0,
-      x: 500,
-    }),
-  start: "20px bottom",
-  end: "center top",
-});
-
-ScrollTrigger.addEventListener("refreshInit", () =>
-  gsap.set(".project", { y: 0 })
-);
+  ScrollTrigger.addEventListener("refreshInit", () =>
+    gsap.set(".project", { y: 0 })
+  );
+}
 
 // add inFocus class to the .input-wrapper which will move the labels above the input fields
 function inFocus(x) {
@@ -140,3 +158,8 @@ function validate(x) {
     x.parentNode.classList.remove("inFocus");
   }
 }
+
+// Save last used language to local storage
+prefferedLanguage();
+generateProjects();
+loadAnimations();
