@@ -377,7 +377,8 @@ section {
   height: 100vh; }
   @media (min-width: 768px) {
     #menu.nav-active {
-      width: 65%; } }
+      width: 65%;
+      box-shadow: -5px 0 20px grey; } }
   @media (min-width: 1024px) {
     #menu.nav-active {
       width: 50%; } }

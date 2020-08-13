@@ -30,7 +30,11 @@ function openNav() {
 }
 
 hamburger.addEventListener("click", openNav);
-menu.addEventListener("click", openNav);
+menu.addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    openNav();
+  }
+});
 
 //GENERATE THE PROJECT DIVS
 function generateProjects() {
@@ -125,13 +129,12 @@ ScrollTrigger.addEventListener("refreshInit", () =>
   gsap.set(".project", { y: 0 })
 );
 
-// fix email field so the label will stay in place even when the input is invalid (missing @)
-
+// add inFocus class to the .input-wrapper which will move the labels above the input fields
 function inFocus(x) {
-  console.log(x.parentNode);
   x.parentNode.classList.add("inFocus");
 }
 
+// when the input loses focus without a value the label will move back down
 function validate(x) {
   if (x.value === "") {
     x.parentNode.classList.remove("inFocus");
