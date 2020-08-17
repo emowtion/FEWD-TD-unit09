@@ -23,7 +23,7 @@
   position: fixed;
   top: 0;
   right: 10px;
-  z-index: 20;
+  z-index: 120;
   height: 40px;
   width: 40px;
   @include mq($bp-m) {
@@ -34,7 +34,7 @@
 #menu.nav-active {
   display: flex;
   background: rgb(243, 243, 243);
-  z-index: 5;
+  z-index: 100;
   margin: auto;
   top: 0;
   width: 100%;

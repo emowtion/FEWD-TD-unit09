@@ -62,39 +62,55 @@ const projects = {
       opdrachtgever: "Team Treehouse Techdegree",
       grade: "Exceeds Expectations",
       description:
-        "With the HTML and CSS provided I rewritten the stylesheet using Sass. With this preprocessor I tried to make the stylesheet as readable and DRY as possible.",
+        "This is a completely responsive Photo Gallery that has some added interactivity thanks to the lightbox feature to make a selected image stand out.",
       challenges:
-        "Sass functions and loops were challenging at the time but after reading the Sass documentation got me through it.",
+        "For this project I've used JavaScript for the very first time. Writing the search function from scratch was the biggest challenge.",
       learned:
-        "The power of Sass and the basics of using loops and functions. Getting a hang of those loops gave me a headstart on JavaScript loops",
+        "Basic use of JavaScript, reading documentation for the plugins and jQuery. ",
       tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit05",
       live: "https://rohald89.github.io/FEWD-TD-unit05/",
       image: "./images/projects/Photo-Gallery-Desktop.png",
     },
     {
-      title: "project 6",
+      title: "Game Show App",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the sixth project of the Front End Web Development Techdegree.",
-      tech: ["HTML", "CSS", "JavaScript"],
+        "This is a fun game that requires you to guess a phrase. Are you able to guess it before you run out of lives?",
+      challenges:
+        "This was the first project where I've used more JavaScript than before. I found it challenging to keep the code as clean as possible. I ended up writing functions and added comments to the code to make it easier to read.",
+      learned: "Manipulating the DOM with JavaScript and the use of functions",
+      tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit06",
       live: "https://rohald89.github.io/FEWD-TD-unit06/",
       image: "./images/projects/Wheel-of-Success.png",
     },
     {
-      title: "project 7",
+      title: "Web App Dashboard",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the seventh project of the Front End Web Development Techdegree.",
-      tech: ["HTML", "CSS", "JavaScript"],
+        "Looking for a place where you can see all your numbers in one place? This is the dashboard for you. ",
+      challenges:
+        "This was a big project including a lot of features like an autocomplete searchbar, dynamic charts, localStorage and CSS Grid.",
+      learned:
+        "creating different kinds of charts using Chart.js and using localStorage to save settings, SVG's",
+      tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit07",
-      live: "https://rohald89.github.io/FEWD-TD-unit017",
+      live: "https://rohald89.github.io/FEWD-TD-unit07/",
       image: "./images/projects/WebApp-Dashboard-Desktop.png",
     },
     {
-      title: "project 8",
+      title: "Employee Directory",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the eight project of the Front End Web Development Techdegree.",
-      tech: ["HTML", "CSS", "JavaScript"],
+        "This page will show you our employee information, click one of the cards to find out more about this employee.",
+      challenges: "",
+      learned:
+        "The use of API's and the use of Objects, callbackfunctions and asynchronus JavaScript",
+      tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit08",
       live: "https://rohald89.github.io/FEWD-TD-unit08/",
       image: "./images/projects/Employee-Directory-Desktop.png",

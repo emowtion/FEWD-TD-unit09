@@ -338,15 +338,18 @@ section {
 
 .back-to-top {
   position: fixed;
-  bottom: 40px;
-  right: 0;
-  display: flex;
-  align-items: center;
+  bottom: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(169, 169, 169, 0.534);
+  text-align: center;
   transition: 0.3s all;
-  transform: rotate(-90deg); }
-  .back-to-top p {
-    margin: 0;
-    padding: 0; }
+  z-index: 99;
+  color: white; }
+  .back-to-top:hover {
+    background-color: rgba(169, 169, 169, 0.8); }
 
 #menu {
   display: flex;
@@ -372,7 +375,7 @@ section {
   position: fixed;
   top: 0;
   right: 10px;
-  z-index: 20;
+  z-index: 120;
   height: 40px;
   width: 40px; }
   @media (min-width: 768px) {
@@ -382,7 +385,7 @@ section {
 #menu.nav-active {
   display: flex;
   background: #f3f3f3;
-  z-index: 5;
+  z-index: 100;
   margin: auto;
   top: 0;
   width: 100%;
@@ -527,12 +530,12 @@ nav ul li {
     .project {
       width: 80%;
       grid-template-columns: 1fr 325px;
-      grid-template-rows: 50px minmax(200px, 1fr) 150px;
-      grid-template-areas: "project__title project__image" "project__description project__image" "project__technologies project__links"; }
+      grid-template-rows: 50px repeat(3, minmax(100px, 1fr)) 80px;
+      grid-template-areas: "project__title project__image" "project__description project__image" "project__challenges project__image" "project__learned project__links" "project__technologies project__links"; }
       .project:nth-child(odd) {
         grid-template-columns: 325px 1fr;
-        grid-template-rows: 50px minmax(200px, 1fr) 150px;
-        grid-template-areas: "project__image project__title" "project__image project__description" "project__links project__technologies"; }
+        grid-template-rows: 50px repeat(3, minmax(100px, 1fr)) 80px;
+        grid-template-areas: "project__image project__title" "project__image project__description" "project__image project__challenges" "project__links project__learned" "project__links project__technologies"; }
         .project:nth-child(odd) .project__image {
           right: 30px; }
         .project:nth-child(odd) .project__links {
@@ -547,7 +550,7 @@ nav ul li {
   max-width: 100%; }
   @media (min-width: 768px) {
     .project__image {
-      box-shadow: -5px 5px 10px black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
       position: absolute;
       top: -30px;
       right: -30px; } }
@@ -555,6 +558,20 @@ nav ul li {
 .project__description {
   grid-area: project__description;
   margin: 10px auto; }
+
+.project__challenges {
+  display: none; }
+  @media (min-width: 768px) {
+    .project__challenges {
+      display: block;
+      grid-area: project__challenges; } }
+
+.project__learned {
+  display: none; }
+  @media (min-width: 768px) {
+    .project__learned {
+      display: block;
+      grid-area: project__learned; } }
 
 .project__features {
   grid-area: project__features; }

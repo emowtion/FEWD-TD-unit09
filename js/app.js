@@ -5,8 +5,8 @@ const menu = document.getElementById("menu");
 const languages = document.getElementById("languages");
 const languageLink = languages.querySelectorAll("a");
 
-const homeTitle = document.querySelector(".home__title");
-const homeParagraph = document.querySelector(".home__paragraph");
+const aboutTitle = document.querySelector(".about__title");
+const aboutParagraph = document.querySelector(".about__paragraph");
 
 let setLanguage = localStorage.getItem("language");
 
@@ -40,12 +40,22 @@ function generateProjects() {
     let image = project.image;
     let github = project.github;
     let liveLink = project.live;
+    let challenges = project.challenges;
+    let learned = project.learned;
 
     projectsHTML += `
   <div class="project" data-index="${index}">
             <h2 class="project__title">${title}</h2>
             <img class="project__image" src="${image}" alt="">
             <p class="project__description">${description}</p>
+            <div class="project__challenges">
+              <h3>Challenges</h3>
+              <p class="project__challenges">${challenges}</p>
+            </div>
+            <div class="project__learned">
+              <h3 class="project__learned">Lessons Learned</h3>
+              <p class="project__learned">${learned}</p>
+            </div>
             <ul class="project__technologies">`;
 
     project.tech.forEach((technologie) => {
@@ -64,8 +74,8 @@ function generateProjects() {
 
 // CHANGE LANGUAGE
 function generateContent(lang) {
-  homeTitle.textContent = content[lang].title;
-  // homeParagraph.textContent = content[lang].paragraph;
+  aboutTitle.textContent = content[lang].aboutTitle;
+  aboutParagraph.textContent = content[lang].aboutParagraph;
 }
 
 function prefferedLanguage() {
