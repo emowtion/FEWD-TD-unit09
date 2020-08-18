@@ -777,6 +777,7 @@ nav ul li {
         height: 0; }
 
 .captcha {
-  margin: 25px auto; }
+  margin: 25px auto;
+  max-width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
