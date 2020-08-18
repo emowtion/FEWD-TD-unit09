@@ -3,106 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/e1b6966a6a.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/splide.min.css">
+    <script
+      src="https://kit.fontawesome.com/e1b6966a6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/splide.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Rohald's Portfolio</title>
   </head>
   <body>
-    <div class="background">
-    </div>
+    <div class="background"></div>
     <a href="#" class="back-to-top"><i class="fad fa-angle-double-up"></i></a>
     <div class="container">
       <div id="open-nav" class="nav-container">
-        <div id="navigation">
+        <div id="navigation"></div>
+      </div>
+
+      <div id="menu">
+        <div id="languages">
+          <a class="language dutch" data-language="dutch">Nederlands</a>
+          <a class="language english" data-language="english">English</a>
         </div>
-    </div>
-    
-    <div id="menu">
-      <div id="languages">
-        <a class="language dutch" language="dutch">Nederlands</a>
-        <a class="language english" language="english">English</a>
+        <nav id="nav" class="">
+          <ul>
+            <li><a id="homeLink" href="#home">Home</a></li>
+            <!-- <li><a id="aboutLink" href="#about">About</a></li> -->
+            <li><a id="projectsLink" href="#projects">Projects</a></li>
+            <li><a id="contactLink" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="socials">
+          <div class="social-icon linkedin">
+            <a
+              href="https://www.linkedin.com/in/rohald89/"
+              class="social-link"
+              target="blank"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="linkedin"
+                class="svg-inline--fa fa-linkedin fa-w-14"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="social-icon github">
+            <a
+              href="https://github.com/rohald89"
+              class="social-link"
+              target="blank"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="github-square"
+                class="svg-inline--fa fa-github-square fa-w-14"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="social-icon instagram">
+            <a
+              href="https://www.instagram.com/rohald.codes/"
+              class="social-link"
+              target="blank"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="instagram-square"
+                class="svg-inline--fa fa-instagram-square fa-w-14"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <!-- the following code snippet comes from stack overflow to get the instagram gradient on hover. 
+               https://stackoverflow.com/questions/47800574/gradient-over-instagram-svg-of-fontawesome-5 -->
+                <radialGradient id="rg" r="150%" cx="30%" cy="107%">
+                  <stop stop-color="#fdf497" offset="0" />
+                  <stop stop-color="#fdf497" offset="0.05" />
+                  <stop stop-color="#fd5949" offset="0.45" />
+                  <stop stop-color="#d6249f" offset="0.6" />
+                  <stop stop-color="#285AEB" offset="0.9" />
+                </radialGradient>
+                <path
+                  d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="social-icon facebook">
+            <a
+              href="https://www.facebook.com/Rohald89/"
+              class="social-link"
+              target="blank"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="facebook-square"
+                class="svg-inline--fa fa-facebook-square fa-w-14"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="social-icon twitter">
+            <a
+              href="https://twitter.com/rohaldc"
+              class="social-link"
+              target="blank"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fab"
+                data-icon="twitter-square"
+                class="svg-inline--fa fa-twitter-square fa-w-14"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- closes menu -->
       </div>
-      <nav id="nav" class="">
-      <ul>
-        <li><a id="homeLink" href="#home">Home</a></li>
-        <!-- <li><a id="aboutLink" href="#about">About</a></li> -->
-        <li><a id="projectsLink" href="#projects">Projects</a></li>
-        <li><a id="contactLink" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="socials">
-      <div class="social-icon linkedin">
-        <a href="https://www.linkedin.com/in/rohald89/" class="social-link" target="blank">
-          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
-            </path>
-          </svg>
-        </a>
-      </div>
-      <div class="social-icon github">
-        <a href="https://github.com/rohald89" class="social-link" target="blank">
-        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-square" class="svg-inline--fa fa-github-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z">
-          </path>
-        </svg>
-      </a>
-      </div>
-      <div class="social-icon instagram">
-        <a href="https://www.instagram.com/rohald.codes/" class="social-link" target="blank">
-        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram-square" class="svg-inline--fa fa-instagram-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          // the following code snippet comes from stack overflow to get the instagram gradient on hover. 
-          // https://stackoverflow.com/questions/47800574/gradient-over-instagram-svg-of-fontawesome-5
-          <radialGradient id="rg" r="150%" cx="30%" cy="107%">
-            <stop stop-color="#fdf497" offset="0" />
-            <stop stop-color="#fdf497" offset="0.05" />
-            <stop stop-color="#fd5949" offset="0.45" />
-            <stop stop-color="#d6249f" offset="0.6" />
-            <stop stop-color="#285AEB" offset="0.9" />
-          </radialGradient>
-          <path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z">
-          </path>
-        </svg>
-      </a>
-      </div>
-      <div class="social-icon facebook">
-        <a href="https://www.facebook.com/Rohald89/" class="social-link" target="blank">
-        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" class="svg-inline--fa fa-facebook-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
-        </path>
-      </svg>
-    </a>
-      </div>
-      <div class="social-icon twitter">
-        <a href="https://twitter.com/rohaldc" class="social-link" target="blank">
-        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter-square" class="svg-inline--fa fa-twitter-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
-          </path>
-        </svg>
-      </a>
-      </div>
-    </div>
-    </div>
-    <main id="main">
+      <!-- End of .container -->
+      <main id="main">
         <section id="home">
           <div class="hero__section">
-            <div class="hero-image"></div>    
+            <div class="hero-image"></div>
             <div class="logo">
-              <?xml version="1.0" encoding="utf-8"?>
-                <!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0  -->
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 697 295" enable-background="new 0 0 697 295" xml:space="preserve">
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 697 295"
+                enable-background="new 0 0 697 295"
+                xml:space="preserve"
+              >
+                <g>
                   <g>
-                    <g>
-                      <path fill="#A0A0A0" d="M410.768,15.95c-3.944,0-7.726,1.569-10.511,4.361L137.303,283.909l0.712,0.712h147.532c3.944,0,7.726-1.569,10.511-4.361L534.453,41.282c9.335-9.358,2.707-25.332-10.511-25.332H410.768z"/>
-                      <path fill="#575757" d="M266.363,259.277l-98.137-98.136c-5.798-5.798-5.798-15.198,0-20.996l98.849-98.85c9.353-9.353,2.729-25.344-10.498-25.344H143.453c-3.938,0-7.714,1.564-10.498,4.348L13.11,140.144c-5.798,5.798-5.798,15.198,0,20.996l119.132,119.132c2.784,2.784,6.561,4.348,10.498,4.348h113.125C269.092,284.621,275.716,268.629,266.363,259.277z"/>
-                      <path fill="#575757" d="M429.238,41.295l98.137,98.136c5.798,5.798,5.798,15.198,0,20.996l-98.849,98.85c-9.353,9.353-2.729,25.344,10.498,25.344h113.125c3.938,0,7.714-1.564,10.498-4.348l119.845-119.846c5.798-5.798,5.798-15.198,0-20.996L563.359,20.299c-2.784-2.784-6.561-4.348-10.498-4.348H439.736C426.509,15.95,419.885,31.942,429.238,41.295z"/>
-                    </g>
+                    <path
+                      fill="#A0A0A0"
+                      d="M410.768,15.95c-3.944,0-7.726,1.569-10.511,4.361L137.303,283.909l0.712,0.712h147.532c3.944,0,7.726-1.569,10.511-4.361L534.453,41.282c9.335-9.358,2.707-25.332-10.511-25.332H410.768z"
+                    />
+                    <path
+                      fill="#575757"
+                      d="M266.363,259.277l-98.137-98.136c-5.798-5.798-5.798-15.198,0-20.996l98.849-98.85c9.353-9.353,2.729-25.344-10.498-25.344H143.453c-3.938,0-7.714,1.564-10.498,4.348L13.11,140.144c-5.798,5.798-5.798,15.198,0,20.996l119.132,119.132c2.784,2.784,6.561,4.348,10.498,4.348h113.125C269.092,284.621,275.716,268.629,266.363,259.277z"
+                    />
+                    <path
+                      fill="#575757"
+                      d="M429.238,41.295l98.137,98.136c5.798,5.798,5.798,15.198,0,20.996l-98.849,98.85c-9.353,9.353-2.729,25.344,10.498,25.344h113.125c3.938,0,7.714-1.564,10.498-4.348l119.845-119.846c5.798-5.798,5.798-15.198,0-20.996L563.359,20.299c-2.784-2.784-6.561-4.348-10.498-4.348H439.736C426.509,15.95,419.885,31.942,429.238,41.295z"
+                    />
                   </g>
-                </svg>
-                <h1 class="home__title">Rohald van Merode</h1>
-                <h3>Front End Web Developer</h3>
+                </g>
+              </svg>
+              <h1 class="home__title">Rohald van Merode</h1>
+              <h3>Front End Web Developer</h3>
             </div>
           </div>
         </section>
@@ -118,25 +214,41 @@
 
         <section id="projects">
           <h1 class="projects__title">Projects</h1>
-            <!-- Project cards get inserted here  -->
+          <!-- Project cards get inserted here  -->
         </section>
 
         <section id="contact">
-                    
           <h1>Contact</h1>
           <div class="contact-container">
             <form id="form" name="contact" method="POST" data-netlify="true">
               <div class="input-wrapper">
-                <input type="text" name="name" onfocus="inFocus(this)" onblur="validate(this)" required>
-                <label class='name-label'>Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  onfocus="inFocus(this)"
+                  onblur="validate(this)"
+                  required
+                />
+                <label class="name-label">Name</label>
               </div>
               <div class="input-wrapper">
-                <input type="email" name="email" onfocus="inFocus(this)" onblur="validate(this)" required>
-                <label class='mail-label'>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  onfocus="inFocus(this)"
+                  onblur="validate(this)"
+                  required
+                />
+                <label class="mail-label">Email</label>
               </div>
               <div class="input-wrapper">
-                <textarea name="message" onfocus="inFocus(this)" onblur="validate(this)" required></textarea>
-                <label class='message-label'>Message</label>
+                <textarea
+                  name="message"
+                  onfocus="inFocus(this)"
+                  onblur="validate(this)"
+                  required
+                ></textarea>
+                <label class="message-label">Message</label>
               </div>
               <div class="captcha">
                 <div data-netlify-recaptcha="true"></div>
@@ -144,16 +256,13 @@
               <button class="submitbtn">Submit</button>
             </form>
           </div>
-          
         </section>
-
-      </div>
-    </main>
+      </main>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
     <script src="js/data.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/app.js"></script>
-
   </body>
 </html>

@@ -105,7 +105,7 @@ function prefferedLanguage() {
   if (setLanguage === "dutch") {
     setLanguage = "dutch";
     languageLink.forEach((lang) => {
-      if (lang.getAttribute("language") === "dutch") {
+      if (lang.getAttribute("data-language") === "dutch") {
         lang.classList.add("active-lang");
         generateContent("dutch");
       }
@@ -113,7 +113,7 @@ function prefferedLanguage() {
   } else {
     setLanguage = "english";
     languageLink.forEach((lang) => {
-      if (lang.getAttribute("language") === "english") {
+      if (lang.getAttribute("data-language") === "english") {
         lang.classList.add("active-lang");
         generateContent("english");
       }
@@ -175,7 +175,7 @@ languageLink.forEach((link) => {
   link.addEventListener("click", () => {
     languages.querySelector(".active-lang").classList.remove("active-lang");
     link.classList.add("active-lang");
-    const lang = link.getAttribute("language");
+    const lang = link.getAttribute("data-language");
     setLanguage = lang;
     localStorage.setItem("language", setLanguage);
     generateContent(lang);
