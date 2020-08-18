@@ -19,6 +19,27 @@
   @include mq($bp-m) {
     width: 80%;
     grid-template-columns: 1fr 325px;
+    grid-template-rows: 50px minmax(100px, 1fr) 80px;
+    grid-template-areas:
+      "project__title project__image"
+      "project__description project__image"
+      "project__technologies project__links";
+    &:nth-child(odd) {
+      grid-template-columns: 325px 1fr;
+      grid-template-rows: 50px minmax(100px, 1fr) 80px;
+      grid-template-areas:
+        "project__image project__title"
+        "project__image project__description"
+        "project__links project__technologies";
+      .project__image {
+        right: 30px;
+      }
+      .project__links {
+        transform: translateX(-30px);
+      }
+    }
+  }
+  @include mq($bp-l) {
     grid-template-rows: 50px repeat(3, minmax(100px, 1fr)) 80px;
     grid-template-areas:
       "project__title project__image"
@@ -35,12 +56,6 @@
         "project__image project__challenges"
         "project__links project__learned"
         "project__links project__technologies";
-      .project__image {
-        right: 30px;
-      }
-      .project__links {
-        transform: translateX(-30px);
-      }
     }
   }
 }
@@ -53,7 +68,8 @@
 .project__image {
   grid-area: project__image;
   max-width: 100%;
-  @include mq($bp-m) {
+  margin: 0 auto;
+  @include mq($bp-l) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
     position: absolute;
     top: -30px;
@@ -67,7 +83,7 @@
 }
 .project__challenges {
   display: none;
-  @include mq($bp-m) {
+  @include mq($bp-l) {
     display: block;
     grid-area: project__challenges;
   }
@@ -75,7 +91,7 @@
 
 .project__learned {
   display: none;
-  @include mq($bp-m) {
+  @include mq($bp-l) {
     display: block;
     grid-area: project__learned;
   }

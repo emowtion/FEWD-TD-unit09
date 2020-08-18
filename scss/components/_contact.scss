@@ -1,3 +1,7 @@
+#form {
+  width: 80%;
+  max-width: 400px;
+}
 .contact-container {
   width: 90%;
   height: 80vh;
@@ -8,7 +12,7 @@
   align-items: center;
   .input-wrapper {
     position: relative;
-    margin: 50px;
+    margin: 50px 0;
     color: #f7f7f7;
     &::before,
     &::after {
@@ -61,6 +65,7 @@
     textarea {
       outline: none;
       border: none;
+      width: 100%;
       color: #f7f7f7;
       padding: 10px;
       background: transparent;

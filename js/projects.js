@@ -8,7 +8,7 @@ const projects = {
         "This was the very first project of the Front End Web Development Techdegree. With this project I had some practice with HTML and CSS basics",
       challenges:
         "At this time it was challenging to find what properties to use to get to a certain style. With the help of MDN docs I achieved the results I was looking for.",
-      learned: "",
+      learned: "Finding solutions to challenges",
       tech: ["HTML", "CSS"],
       github: "https://github.com/rohald89/FEWD-TD-unit01",
       live: "https://rohald89.github.io/FEWD-TD-unit01/",
@@ -107,7 +107,8 @@ const projects = {
       grade: "Exceeds Expectations",
       description:
         "This page will show you our employee information, click one of the cards to find out more about this employee.",
-      challenges: "",
+      challenges:
+        "Working with API and finding out where to retrieve certain information from it.",
       learned:
         "The use of API's and the use of Objects, callbackfunctions and asynchronus JavaScript",
       tech: ["HTML", "CSS", "jQuery", "JavaScript"],
@@ -118,76 +119,119 @@ const projects = {
   ],
   dutch: [
     {
-      title: "project 1",
-      opdrachtgever: "",
-      grade: "",
-      description: "Dit was het eerste project van Team Treehouse Techdegree",
-      challenges: "",
-      features: "",
+      title: "Persoonlijk Profiel",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Overtreft Verwachting",
+      description:
+        "Dit was mijn eerste project voor het Front End Web Development Techdegree aan Team Treehouse. Met dit project heb ik geoefend met de basis van HTML en CSS.",
+      challenges:
+        "Bij het bouwen van deze pagina was het een uitdaging om de juiste properties te gebruiken om het eindresultaat te creeren zoals ik wilde. Met behulp van MDN docs en CSS-tricks heb ik de resultaten gehaald waar ik naar op zoek was.",
+      learned: "Het zoeken naar antwoorden op de uitdagingen.",
       tech: ["HTML", "CSS"],
       github: "https://github.com/rohald89/FEWD-TD-unit01",
       live: "https://rohald89.github.io/FEWD-TD-unit01/",
       image: "./images/projects/Profile-Page.png",
     },
     {
-      title: "project 2",
+      title: "Responsive Layout",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "Dit was het tweede project voor het FEWD techdegree van Team Treehouse",
+        "Deze pagina is volledig responsive met behulp van floats en media queries. De pagina kan zonder enige problemen op verschillende schermformaten bekeken worden.",
+      challenges:
+        "Het gebruik van Floats was lastig op dit punt in mijn studie. Vooral om ze zo te laten reageren zoals gewenst.",
+      learned:
+        "Vanaf dit project heb ik geleerd wat een Mobile First approach is.",
       tech: ["HTML", "CSS"],
       github: "https://github.com/rohald89/FEWD-TD-unit02",
       live: "https://rohald89.github.io/FEWD-TD-unit02/",
       image: "./images/projects/Responsive-Profile-Desktop.png",
     },
     {
-      title: "project 3",
+      title: "Online Registratie Formulier",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the third project of the Front End Web Development Techdegree.",
+        "Met behulp van een Mobile First approach heb ik dit basis registratie formulier gemaakt.",
+      challenges:
+        "Vanaf dit project heb ik gebruik gemaakt van Flexbox, iets wat in het begin lastig leek met de hoeveelheid properties maar eenmaal onder controle een grote opluchting is ten opzichte van Floats.",
+      learned:
+        "Flexbox en verschillende types input elementen met de bijbehorende attributen.",
       tech: ["HTML", "CSS"],
       github: "https://github.com/rohald89/FEWD-TD-unit03",
       live: "https://rohald89.github.io/FEWD-TD-unit03/",
       image: "./images/projects/Online-Registration-Form-Desktop.png",
     },
     {
-      title: "project 4",
+      title: "Style Guide",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the fourth project of the Front End Web Development Techdegree.",
+        "De HTML en CSS waren voor dit project al aangerijkt. Dit CSS heb ik volledig herschreven met behulp van SASS. Hierbij heb ik gezorgd dat het stylesheed beter leesbaar was en er geen herhaalde code in voor kwam.",
+      challenges:
+        "De functies en loops in SASS waren een uitdaging, door het lezen van de documentatie ben ik er in geslaagd en is het aantal regels code drastisch verlaagd.",
+      learned:
+        "De kracht die SASS te bieden heeft en het gebruik van loops en functies. Deze onder de knie krijgen heeft mij geholpen bij het leren voor JavaScript loops.",
       tech: ["HTML", "CSS", "Sass"],
       github: "https://github.com/rohald89/FEWD-TD-unit04",
       live: "https://rohald89.github.io/FEWD-TD-unit04/",
       image: "./images/projects/Style-Guide.png",
     },
     {
-      title: "project 5",
+      title: "Interactieve Foto Gallerij",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the fifth project of the Front End Web Development Techdegree.",
+        "Dit is een volledig responsive Foto Gallerij waarbij er interactiviteit is toegevoegd met behulp van een diashow om de geselecteerde foto uit te lichten.",
+      challenges:
+        "Dit is het eerste project waarbij ik JavaScript heb gebruikt. Het schrijven van de zoek functie was hierbij de grootste uitdaging.",
+      learned:
+        "Basis gebruik van JavaScript, lezen van de documentatie voor plugins en jQuery. ",
       tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit05",
       live: "https://rohald89.github.io/FEWD-TD-unit05/",
       image: "./images/projects/Photo-Gallery-Desktop.png",
     },
     {
-      title: "project 6",
+      title: "Galgje",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the sixth project of the Front End Web Development Techdegree.",
-      tech: ["HTML", "CSS", "JavaScript"],
+        "Dit is een spel waarbij een zin geraden moet worden. Lukt het jou om de zin te raden zonder teveel fouten te maken?",
+      challenges:
+        "Dit was het eerste project waarbij ik meer JavaScript heb gebruikt en de DOM heb gemanipuleerd. Ik vond het lastig om de code zo schoon mogelijk te houden. Om dit toch te realiseren heb ik functies geschreven en comments toegevoegd in de code om het beter leesbaar te houden.",
+      learned: "Manipulating the DOM with JavaScript and the use of functions",
+      tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit06",
       live: "https://rohald89.github.io/FEWD-TD-unit06/",
       image: "./images/projects/Wheel-of-Success.png",
     },
     {
-      title: "project 7",
+      title: "Web App Dashboard",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the seventh project of the Front End Web Development Techdegree.",
-      tech: ["HTML", "CSS", "JavaScript"],
+        "Opzoek naar een plek waar je al je socialmedia statistieken op een plek hebt? Dan is dit dashboard voor jou!",
+      challenges:
+        "Dit was een groter project waarbij verschillende features zoals een autocomplete zoekbalk, dynamische grafieken, localStorage en CSS Grid.",
+      learned:
+        "Het creeren van verschillende grafieken met behulp van Chart.js, SVG's en het gebruik van localStorage om instellingen op te slaan.",
+      tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit07",
-      live: "https://rohald89.github.io/FEWD-TD-unit017",
+      live: "https://rohald89.github.io/FEWD-TD-unit07/",
       image: "./images/projects/WebApp-Dashboard-Desktop.png",
     },
     {
-      title: "project 8",
+      title: "Employee Directory",
+      opdrachtgever: "Team Treehouse Techdegree",
+      grade: "Exceeds Expectations",
       description:
-        "This was the eight project of the Front End Web Development Techdegree.",
-      tech: ["HTML", "CSS", "JavaScript"],
+        "Op deze pagina kan je medewerker informatie terug vinden. Door op een van de kaarten te klikken krijg je meer informatie over desbetreffende medewerker.",
+      challenges:
+        "Werken met de API en kijken waar er bepaalde informatie gevonden kan worden.",
+      learned:
+        "Het gebruik van API's en JavaScript Objects, callback functions en asynchronus JavaScript",
+      tech: ["HTML", "CSS", "jQuery", "JavaScript"],
       github: "https://github.com/rohald89/FEWD-TD-unit08",
       live: "https://rohald89.github.io/FEWD-TD-unit08/",
       image: "./images/projects/Employee-Directory-Desktop.png",

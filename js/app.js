@@ -1,12 +1,22 @@
 const hamburger = document.getElementById("open-nav");
 const navigation = document.getElementById("navigation");
 const menu = document.getElementById("menu");
-
 const languages = document.getElementById("languages");
 const languageLink = languages.querySelectorAll("a");
 
+const home = document.querySelector("#home");
+const backToTop = document.querySelector(".back-to-top");
+
+const homeLink = document.querySelector("#homeLink");
+const aboutLink = document.querySelector("#aboutLink");
+const projectsLink = document.querySelector("#projectsLink");
+const contactLink = document.querySelector("#contactLink");
 const aboutTitle = document.querySelector(".about__title");
 const aboutParagraph = document.querySelector(".about__paragraph");
+const projectsTitle = document.querySelector(".projects__title");
+const nameLabel = document.querySelector(".name-label");
+const messageLabel = document.querySelector(".message-label");
+const submitbtn = document.querySelector(".submitbtn");
 
 let setLanguage = localStorage.getItem("language");
 
@@ -72,12 +82,21 @@ function generateProjects() {
   projectsDiv.innerHTML = projectsHTML;
 }
 
-// CHANGE LANGUAGE
+// Generate the content based on the saved / chosen language
 function generateContent(lang) {
-  aboutTitle.textContent = content[lang].aboutTitle;
-  aboutParagraph.textContent = content[lang].aboutParagraph;
+  homeLink.textContent = content[lang].homeLink;
+  // aboutLink.textContent = content[lang].aboutLink;
+  projectsLink.textContent = content[lang].projectsLink;
+  contactLink.textContent = content[lang].contactLink;
+  // aboutTitle.textContent = content[lang].aboutTitle;
+  // aboutParagraph.textContent = content[lang].aboutParagraph;
+  projectsTitle.textContent = content[lang].projectsTitle;
+  nameLabel.textContent = content[lang].nameLabel;
+  messageLabel.textContent = content[lang].messageLabel;
+  submitbtn.textContent = content[lang].submitbtn;
 }
 
+// check wether there's a last used language stored in localStorage if there is load it otherwise load English content.
 function prefferedLanguage() {
   // check if there's something in localstorage already
   // if not set to English
@@ -102,6 +121,8 @@ function prefferedLanguage() {
   }
 }
 
+// animations on the project cards. move from right when they come in view and when passed move then left
+// when the user scrolls up again they will work the other way around so they come back from where they dissapeared to.
 function loadAnimations() {
   gsap.set(".project", { x: 500, opacity: 0 });
   ScrollTrigger.batch(".project", {
@@ -148,6 +169,8 @@ function validate(x) {
   }
 }
 
+//when another language is clicked save change to local storage en gernate Content and project again.
+// had to reload the animations here aswell since they stoped working after the content refresh.
 languageLink.forEach((link) => {
   link.addEventListener("click", () => {
     languages.querySelector(".active-lang").classList.remove("active-lang");
@@ -160,10 +183,22 @@ languageLink.forEach((link) => {
     loadAnimations();
   });
 });
+
+// open/close nav when hamburger/X is clicked
 hamburger.addEventListener("click", openNav);
+// close nav only when one of the links is clicked
 menu.addEventListener("click", (e) => {
   if (e.target.tagName === "A") {
     openNav();
+  }
+});
+
+// make the back to top button disapear when the user starts scrolling
+window.addEventListener("scroll", () => {
+  if (scrollY > home.scrollHeight / 2) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
   }
 });
 

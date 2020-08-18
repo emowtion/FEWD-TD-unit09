@@ -27,10 +27,10 @@
       </div>
       <nav id="nav" class="">
       <ul>
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a id="homeLink" href="#home">Home</a></li>
+        <!-- <li><a id="aboutLink" href="#about">About</a></li> -->
+        <li><a id="projectsLink" href="#projects">Projects</a></li>
+        <li><a id="contactLink" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="socials">
@@ -106,7 +106,7 @@
             </div>
           </div>
         </section>
-        <section id="about">
+        <!-- <section id="about">
           <h1 class="about__title">About</h1>
           <p class='about__paragraph'>
             Hi! First of all I'd like to thank you for visiting my page and taking the time to read this. I'm Rohald van Merode, a selftaught front end web developer based near Amsterdam, the Netherlands. 
@@ -114,7 +114,7 @@
             On this portfolio page you'll find all the projects I've created so far. 
             Since graduating the Front End techdegree I'm now studying the back end aswell to become an all round Full Stack webdeveloper. If you're interested in some of my work or want to have a chat feel free to contact me on any social media or though the contact form at the bottom of this page. 
           </p>
-        </section>
+        </section> -->
 
         <section id="projects">
           <h1 class="projects__title">Projects</h1>
@@ -128,15 +128,15 @@
             <form id="form" method="POST">
               <div class="input-wrapper">
                 <input type="text" name="name" onfocus="inFocus(this)" onblur="validate(this)" required>
-                <label>Name</label>
+                <label class='name-label'>Name</label>
               </div>
               <div class="input-wrapper">
                 <input type="email" name="email" onfocus="inFocus(this)" onblur="validate(this)" required>
-                <label>Email</label>
+                <label class='mail-label'>Email</label>
               </div>
               <div class="input-wrapper">
                 <textarea name="message" onfocus="inFocus(this)" onblur="validate(this)" required></textarea>
-                <label>Message</label>
+                <label class='message-label'>Message</label>
               </div>
               <button class="submitbtn">Submit</button>
             </form>

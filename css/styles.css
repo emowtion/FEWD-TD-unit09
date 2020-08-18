@@ -343,9 +343,10 @@ section {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: rgba(169, 169, 169, 0.534);
+  background-color: rgba(169, 169, 169, 0.934);
   text-align: center;
-  transition: 0.3s all;
+  display: none;
+  transition: 0.4s all;
   z-index: 99;
   color: white; }
   .back-to-top:hover {
@@ -530,16 +531,24 @@ nav ul li {
     .project {
       width: 80%;
       grid-template-columns: 1fr 325px;
+      grid-template-rows: 50px minmax(100px, 1fr) 80px;
+      grid-template-areas: "project__title project__image" "project__description project__image" "project__technologies project__links"; }
+      .project:nth-child(odd) {
+        grid-template-columns: 325px 1fr;
+        grid-template-rows: 50px minmax(100px, 1fr) 80px;
+        grid-template-areas: "project__image project__title" "project__image project__description" "project__links project__technologies"; }
+        .project:nth-child(odd) .project__image {
+          right: 30px; }
+        .project:nth-child(odd) .project__links {
+          transform: translateX(-30px); } }
+  @media (min-width: 1024px) {
+    .project {
       grid-template-rows: 50px repeat(3, minmax(100px, 1fr)) 80px;
       grid-template-areas: "project__title project__image" "project__description project__image" "project__challenges project__image" "project__learned project__links" "project__technologies project__links"; }
       .project:nth-child(odd) {
         grid-template-columns: 325px 1fr;
         grid-template-rows: 50px repeat(3, minmax(100px, 1fr)) 80px;
-        grid-template-areas: "project__image project__title" "project__image project__description" "project__image project__challenges" "project__links project__learned" "project__links project__technologies"; }
-        .project:nth-child(odd) .project__image {
-          right: 30px; }
-        .project:nth-child(odd) .project__links {
-          transform: translateX(-30px); } }
+        grid-template-areas: "project__image project__title" "project__image project__description" "project__image project__challenges" "project__links project__learned" "project__links project__technologies"; } }
 
 .project__title {
   grid-area: project__title;
@@ -547,8 +556,9 @@ nav ul li {
 
 .project__image {
   grid-area: project__image;
-  max-width: 100%; }
-  @media (min-width: 768px) {
+  max-width: 100%;
+  margin: 0 auto; }
+  @media (min-width: 1024px) {
     .project__image {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
       position: absolute;
@@ -561,14 +571,14 @@ nav ul li {
 
 .project__challenges {
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .project__challenges {
       display: block;
       grid-area: project__challenges; } }
 
 .project__learned {
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .project__learned {
       display: block;
       grid-area: project__learned; } }
@@ -679,6 +689,10 @@ nav ul li {
   background-position: center;
   clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 0); }
 
+#form {
+  width: 80%;
+  max-width: 400px; }
+
 .contact-container {
   width: 90%;
   height: 80vh;
@@ -689,7 +703,7 @@ nav ul li {
   align-items: center; }
   .contact-container .input-wrapper {
     position: relative;
-    margin: 50px;
+    margin: 50px 0;
     color: #f7f7f7; }
     .contact-container .input-wrapper::before, .contact-container .input-wrapper::after {
       content: "";
@@ -726,6 +740,7 @@ nav ul li {
     .contact-container .input-wrapper textarea {
       outline: none;
       border: none;
+      width: 100%;
       color: #f7f7f7;
       padding: 10px;
       background: transparent; }
