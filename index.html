@@ -125,7 +125,7 @@
                     
           <h1>Contact</h1>
           <div class="contact-container">
-            <form id="form" method="POST">
+            <form id="form" name="contact" method="POST" data-netlify="true">
               <div class="input-wrapper">
                 <input type="text" name="name" onfocus="inFocus(this)" onblur="validate(this)" required>
                 <label class='name-label'>Name</label>
@@ -137,6 +137,9 @@
               <div class="input-wrapper">
                 <textarea name="message" onfocus="inFocus(this)" onblur="validate(this)" required></textarea>
                 <label class='message-label'>Message</label>
+              </div>
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
               </div>
               <button class="submitbtn">Submit</button>
             </form>
