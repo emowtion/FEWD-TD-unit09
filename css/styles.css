@@ -776,4 +776,7 @@ nav ul li {
       .contact-container .submitbtn:focus:after {
         height: 0; }
 
+.captcha {
+  margin: 25px auto; }
+
 /*# sourceMappingURL=styles.css.map */
