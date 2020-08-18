@@ -645,7 +645,7 @@ nav ul li {
       flex-direction: row; } }
 
 .background {
-  background-image: url(../../images/background.svg);
+  background-image: url(../images/background.svg);
   background-position: center;
   background-size: cover;
   position: fixed;
@@ -684,7 +684,7 @@ nav ul li {
   width: 100%;
   min-width: 320px;
   max-width: 400px;
-  background: url("../../images/profile-image.jpg") no-repeat;
+  background: url("../images/profile-image.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 0 100%, 70% 100%, 100% 0); }
